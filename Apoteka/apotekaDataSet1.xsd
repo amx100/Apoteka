@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="apotekaDataSet1" targetNamespace="http://tempuri.org/apotekaDataSet1.xsd" xmlns:mstns="http://tempuri.org/apotekaDataSet1.xsd" xmlns="http://tempuri.org/apotekaDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="apotekaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="apotekaConnectionString (Settings)" PropertyReference="ApplicationSettings.Apoteka.Properties.Settings.GlobalReference.Default.apotekaConnectionString" Provider="Devart.Data.MySql" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_historija_prodajeTableAdapter" GeneratorDataComponentClassName="vw_historija_prodajeTableAdapter" Name="vw_historija_prodaje" UserDataComponentName="vw_historija_prodajeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="apotekaConnectionString (Settings)" DbObjectName="apoteka.vw_historija_prodaje" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT historija_prodaje_id, ime, prezime, naziv, kolicina, datum FROM apoteka.vw_historija_prodaje</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="historija_prodaje_id" DataSetColumn="historija_prodaje_id" />
+              <Mapping SourceColumn="ime" DataSetColumn="ime" />
+              <Mapping SourceColumn="prezime" DataSetColumn="prezime" />
+              <Mapping SourceColumn="naziv" DataSetColumn="naziv" />
+              <Mapping SourceColumn="kolicina" DataSetColumn="kolicina" />
+              <Mapping SourceColumn="datum" DataSetColumn="datum" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_lekovi_kategorijeTableAdapter" GeneratorDataComponentClassName="vw_lekovi_kategorijeTableAdapter" Name="vw_lekovi_kategorije" UserDataComponentName="vw_lekovi_kategorijeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="apotekaConnectionString (Settings)" DbObjectName="apoteka.vw_lekovi_kategorije" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT lekovi_id, naziv, sastav, kategorija FROM apoteka.vw_lekovi_kategorije</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="lekovi_id" DataSetColumn="lekovi_id" />
+              <Mapping SourceColumn="naziv" DataSetColumn="naziv" />
+              <Mapping SourceColumn="sastav" DataSetColumn="sastav" />
+              <Mapping SourceColumn="kategorija" DataSetColumn="kategorija" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_prodajaTableAdapter" GeneratorDataComponentClassName="vw_prodajaTableAdapter" Name="vw_prodaja" UserDataComponentName="vw_prodajaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="apotekaConnectionString (Settings)" DbObjectName="apoteka.vw_prodaja" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ime, prezime, naziv, kolicina, datum, ukupna_cena FROM apoteka.vw_prodaja</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ime" DataSetColumn="ime" />
+              <Mapping SourceColumn="prezime" DataSetColumn="prezime" />
+              <Mapping SourceColumn="naziv" DataSetColumn="naziv" />
+              <Mapping SourceColumn="kolicina" DataSetColumn="kolicina" />
+              <Mapping SourceColumn="datum" DataSetColumn="datum" />
+              <Mapping SourceColumn="ukupna_cena" DataSetColumn="ukupna_cena" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_suma_prodajeTableAdapter" GeneratorDataComponentClassName="vw_suma_prodajeTableAdapter" Name="vw_suma_prodaje" UserDataComponentName="vw_suma_prodajeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="apotekaConnectionString (Settings)" DbObjectName="apoteka.vw_suma_prodaje" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT naziv, ukupna_cena, datum FROM apoteka.vw_suma_prodaje</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="naziv" DataSetColumn="naziv" />
+              <Mapping SourceColumn="ukupna_cena" DataSetColumn="ukupna_cena" />
+              <Mapping SourceColumn="datum" DataSetColumn="datum" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_ukupna_cena_po_dobavljacuTableAdapter" GeneratorDataComponentClassName="vw_ukupna_cena_po_dobavljacuTableAdapter" Name="vw_ukupna_cena_po_dobavljacu" UserDataComponentName="vw_ukupna_cena_po_dobavljacuTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="apotekaConnectionString (Settings)" DbObjectName="apoteka.vw_ukupna_cena_po_dobavljacu" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT dobavljac, ukupna_cena FROM apoteka.vw_ukupna_cena_po_dobavljacu</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="dobavljac" DataSetColumn="dobavljac" />
+              <Mapping SourceColumn="ukupna_cena" DataSetColumn="ukupna_cena" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="apotekaDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="apotekaDataSet1" msprop:Generator_DataSetName="apotekaDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_historija_prodaje" msprop:Generator_RowEvHandlerName="vw_historija_prodajeRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_historija_prodajeRowDeleted" msprop:Generator_RowDeletingName="vw_historija_prodajeRowDeleting" msprop:Generator_RowEvArgName="vw_historija_prodajeRowChangeEvent" msprop:Generator_TablePropName="vw_historija_prodaje" msprop:Generator_RowChangedName="vw_historija_prodajeRowChanged" msprop:Generator_RowChangingName="vw_historija_prodajeRowChanging" msprop:Generator_TableClassName="vw_historija_prodajeDataTable" msprop:Generator_RowClassName="vw_historija_prodajeRow" msprop:Generator_TableVarName="tablevw_historija_prodaje" msprop:Generator_UserTableName="vw_historija_prodaje">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="historija_prodaje_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="historija_prodaje_id" msprop:Generator_ColumnPropNameInTable="historija_prodaje_idColumn" msprop:Generator_ColumnVarNameInTable="columnhistorija_prodaje_id" msprop:Generator_UserColumnName="historija_prodaje_id" type="xs:int" />
+              <xs:element name="ime" msprop:Generator_ColumnPropNameInRow="ime" msprop:Generator_ColumnPropNameInTable="imeColumn" msprop:Generator_ColumnVarNameInTable="columnime" msprop:Generator_UserColumnName="ime" type="xs:string" />
+              <xs:element name="prezime" msprop:Generator_ColumnPropNameInRow="prezime" msprop:Generator_ColumnPropNameInTable="prezimeColumn" msprop:Generator_ColumnVarNameInTable="columnprezime" msprop:Generator_UserColumnName="prezime" type="xs:string" />
+              <xs:element name="naziv" msprop:Generator_ColumnPropNameInRow="naziv" msprop:Generator_ColumnPropNameInTable="nazivColumn" msprop:Generator_ColumnVarNameInTable="columnnaziv" msprop:Generator_UserColumnName="naziv" type="xs:string" />
+              <xs:element name="kolicina" msprop:Generator_ColumnPropNameInRow="kolicina" msprop:Generator_ColumnPropNameInTable="kolicinaColumn" msprop:Generator_ColumnVarNameInTable="columnkolicina" msprop:Generator_UserColumnName="kolicina" type="xs:long" />
+              <xs:element name="datum" msprop:Generator_ColumnPropNameInRow="datum" msprop:Generator_ColumnPropNameInTable="datumColumn" msprop:Generator_ColumnVarNameInTable="columndatum" msprop:Generator_UserColumnName="datum" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_lekovi_kategorije" msprop:Generator_RowEvHandlerName="vw_lekovi_kategorijeRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_lekovi_kategorijeRowDeleted" msprop:Generator_RowDeletingName="vw_lekovi_kategorijeRowDeleting" msprop:Generator_RowEvArgName="vw_lekovi_kategorijeRowChangeEvent" msprop:Generator_TablePropName="vw_lekovi_kategorije" msprop:Generator_RowChangedName="vw_lekovi_kategorijeRowChanged" msprop:Generator_RowChangingName="vw_lekovi_kategorijeRowChanging" msprop:Generator_TableClassName="vw_lekovi_kategorijeDataTable" msprop:Generator_RowClassName="vw_lekovi_kategorijeRow" msprop:Generator_TableVarName="tablevw_lekovi_kategorije" msprop:Generator_UserTableName="vw_lekovi_kategorije">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="lekovi_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="lekovi_id" msprop:Generator_ColumnPropNameInTable="lekovi_idColumn" msprop:Generator_ColumnVarNameInTable="columnlekovi_id" msprop:Generator_UserColumnName="lekovi_id" type="xs:int" />
+              <xs:element name="naziv" msprop:Generator_ColumnPropNameInRow="naziv" msprop:Generator_ColumnPropNameInTable="nazivColumn" msprop:Generator_ColumnVarNameInTable="columnnaziv" msprop:Generator_UserColumnName="naziv" type="xs:string" />
+              <xs:element name="sastav" msprop:Generator_ColumnPropNameInRow="sastav" msprop:Generator_ColumnPropNameInTable="sastavColumn" msprop:Generator_ColumnVarNameInTable="columnsastav" msprop:Generator_UserColumnName="sastav" type="xs:string" />
+              <xs:element name="kategorija" msprop:Generator_ColumnPropNameInRow="kategorija" msprop:Generator_ColumnPropNameInTable="kategorijaColumn" msprop:Generator_ColumnVarNameInTable="columnkategorija" msprop:Generator_UserColumnName="kategorija" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_prodaja" msprop:Generator_RowEvHandlerName="vw_prodajaRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_prodajaRowDeleted" msprop:Generator_RowDeletingName="vw_prodajaRowDeleting" msprop:Generator_RowEvArgName="vw_prodajaRowChangeEvent" msprop:Generator_TablePropName="vw_prodaja" msprop:Generator_RowChangedName="vw_prodajaRowChanged" msprop:Generator_RowChangingName="vw_prodajaRowChanging" msprop:Generator_TableClassName="vw_prodajaDataTable" msprop:Generator_RowClassName="vw_prodajaRow" msprop:Generator_TableVarName="tablevw_prodaja" msprop:Generator_UserTableName="vw_prodaja">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ime" msprop:Generator_ColumnPropNameInRow="ime" msprop:Generator_ColumnPropNameInTable="imeColumn" msprop:Generator_ColumnVarNameInTable="columnime" msprop:Generator_UserColumnName="ime" type="xs:string" />
+              <xs:element name="prezime" msprop:Generator_ColumnPropNameInRow="prezime" msprop:Generator_ColumnPropNameInTable="prezimeColumn" msprop:Generator_ColumnVarNameInTable="columnprezime" msprop:Generator_UserColumnName="prezime" type="xs:string" />
+              <xs:element name="naziv" msprop:Generator_ColumnPropNameInRow="naziv" msprop:Generator_ColumnPropNameInTable="nazivColumn" msprop:Generator_ColumnVarNameInTable="columnnaziv" msprop:Generator_UserColumnName="naziv" type="xs:string" />
+              <xs:element name="kolicina" msprop:Generator_ColumnPropNameInRow="kolicina" msprop:Generator_ColumnPropNameInTable="kolicinaColumn" msprop:Generator_ColumnVarNameInTable="columnkolicina" msprop:Generator_UserColumnName="kolicina" type="xs:long" />
+              <xs:element name="datum" msprop:Generator_ColumnPropNameInRow="datum" msprop:Generator_ColumnPropNameInTable="datumColumn" msprop:Generator_ColumnVarNameInTable="columndatum" msprop:Generator_UserColumnName="datum" type="xs:dateTime" />
+              <xs:element name="ukupna_cena" msprop:Generator_ColumnPropNameInRow="ukupna_cena" msprop:Generator_ColumnPropNameInTable="ukupna_cenaColumn" msprop:Generator_ColumnVarNameInTable="columnukupna_cena" msprop:Generator_UserColumnName="ukupna_cena" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_suma_prodaje" msprop:Generator_RowEvHandlerName="vw_suma_prodajeRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_suma_prodajeRowDeleted" msprop:Generator_RowDeletingName="vw_suma_prodajeRowDeleting" msprop:Generator_RowEvArgName="vw_suma_prodajeRowChangeEvent" msprop:Generator_TablePropName="vw_suma_prodaje" msprop:Generator_RowChangedName="vw_suma_prodajeRowChanged" msprop:Generator_RowChangingName="vw_suma_prodajeRowChanging" msprop:Generator_TableClassName="vw_suma_prodajeDataTable" msprop:Generator_RowClassName="vw_suma_prodajeRow" msprop:Generator_TableVarName="tablevw_suma_prodaje" msprop:Generator_UserTableName="vw_suma_prodaje">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="naziv" msprop:Generator_ColumnPropNameInRow="naziv" msprop:Generator_ColumnPropNameInTable="nazivColumn" msprop:Generator_ColumnVarNameInTable="columnnaziv" msprop:Generator_UserColumnName="naziv" type="xs:string" />
+              <xs:element name="ukupna_cena" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="ukupna_cena" msprop:Generator_ColumnPropNameInTable="ukupna_cenaColumn" msprop:Generator_ColumnVarNameInTable="columnukupna_cena" msprop:Generator_UserColumnName="ukupna_cena" type="xs:decimal" minOccurs="0" />
+              <xs:element name="datum" msprop:Generator_ColumnPropNameInRow="datum" msprop:Generator_ColumnPropNameInTable="datumColumn" msprop:Generator_ColumnVarNameInTable="columndatum" msprop:Generator_UserColumnName="datum" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_ukupna_cena_po_dobavljacu" msprop:Generator_RowEvHandlerName="vw_ukupna_cena_po_dobavljacuRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_ukupna_cena_po_dobavljacuRowDeleted" msprop:Generator_RowDeletingName="vw_ukupna_cena_po_dobavljacuRowDeleting" msprop:Generator_RowEvArgName="vw_ukupna_cena_po_dobavljacuRowChangeEvent" msprop:Generator_TablePropName="vw_ukupna_cena_po_dobavljacu" msprop:Generator_RowChangedName="vw_ukupna_cena_po_dobavljacuRowChanged" msprop:Generator_RowChangingName="vw_ukupna_cena_po_dobavljacuRowChanging" msprop:Generator_TableClassName="vw_ukupna_cena_po_dobavljacuDataTable" msprop:Generator_RowClassName="vw_ukupna_cena_po_dobavljacuRow" msprop:Generator_TableVarName="tablevw_ukupna_cena_po_dobavljacu" msprop:Generator_UserTableName="vw_ukupna_cena_po_dobavljacu">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dobavljac" msprop:Generator_ColumnPropNameInRow="dobavljac" msprop:Generator_ColumnPropNameInTable="dobavljacColumn" msprop:Generator_ColumnVarNameInTable="columndobavljac" msprop:Generator_UserColumnName="dobavljac" type="xs:string" />
+              <xs:element name="ukupna_cena" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="ukupna_cena" msprop:Generator_ColumnPropNameInTable="ukupna_cenaColumn" msprop:Generator_ColumnVarNameInTable="columnukupna_cena" msprop:Generator_UserColumnName="ukupna_cena" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_historija_prodaje" />
+      <xs:field xpath="mstns:historija_prodaje_id" />
+    </xs:unique>
+    <xs:unique name="vw_lekovi_kategorije_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_lekovi_kategorije" />
+      <xs:field xpath="mstns:lekovi_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
