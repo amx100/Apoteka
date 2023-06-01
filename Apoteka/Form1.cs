@@ -7,10 +7,32 @@ namespace Apoteka
 {
 	public partial class Form1 : Form
 	{
+		
 		public Form1()
 		{
 			InitializeComponent();
 		}
+
+		private const string CorrectUsername = "ahmed";
+		private const string CorrectPassword = "ahmed";
+		private void btnLogin_Click(object sender, EventArgs e)
+		{
+			string username = txtUsername.Text;
+			string password = txtPassword.Text;
+
+			if (username == CorrectUsername && password == CorrectPassword)
+			{
+				MessageBox.Show("Login successful!", "Apoteka MG Pharm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				Form2 form2 = new Form2();
+				form2.Show();
+				this.Hide();
+			}
+			else
+			{
+				MessageBox.Show("Invalid username or password. Please try again.", "Apoteka MG Pharm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
 
 
 		private void btnZatvori_Click(object sender, EventArgs e)
@@ -96,6 +118,32 @@ namespace Apoteka
 		{
 
 		}
+
+		private void textBox1_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label2_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label1_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void panel5_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void label5_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
-}
+	}
+
 

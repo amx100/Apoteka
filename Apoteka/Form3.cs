@@ -64,19 +64,59 @@ namespace Apoteka
 
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
-			this.lekoviBindingSource.AddNew();
+			
+			
+
 		}
+
+		private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+		{
+			
+		}
+
+
+
+
 
 		private void btnDelete_Click(object sender, EventArgs e)
 		{
-			this.lekoviBindingSource.RemoveCurrent();
+			if (lekoviDataGridView.SelectedRows.Count > 0)
+			{
+				int selectedIndex = lekoviDataGridView.SelectedRows[0].Index;
+				lekoviDataGridView.Rows.RemoveAt(selectedIndex);
+			}
 		}
 
-		private void button1_Click(object sender, EventArgs e)
+
+
+
+		private void btnSave_Click(object sender, EventArgs e)
 		{
 			this.Validate();
 			this.lekoviBindingSource.EndEdit();
 			this.tableAdapterManager.UpdateAll(this.apotekaDataSet);
+		}
+
+
+
+		private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void lekovi_idLabel_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void lekoviBindingNavigator_RefreshItems(object sender, EventArgs e)
+		{
+
+		}
+
+		private void toolStripLabel2_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

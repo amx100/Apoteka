@@ -23,6 +23,16 @@ namespace Apoteka
 				Form3 Lekovi = new Form3();
 				Lekovi.Show();
 			}
+
+		private void Form2_Load(object sender, EventArgs e)
+		{
+
 		}
+
+		private void btnZatvori_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 	}
 
