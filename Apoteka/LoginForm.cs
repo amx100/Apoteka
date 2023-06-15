@@ -1,39 +1,19 @@
-﻿using System;
+﻿using Devart.Data.MySql;
+using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace Apoteka
 {
-	public partial class Form1 : Form
+	public partial class LoginForm : Form
 	{
 		
-		public Form1()
+		public LoginForm()
 		{
 			InitializeComponent();
 		}
-
-		private const string CorrectUsername = "ahmed";
-		private const string CorrectPassword = "ahmed";
-		private void btnLogin_Click(object sender, EventArgs e)
-		{
-			string username = txtUsername.Text;
-			string password = txtPassword.Text;
-
-			if (username == CorrectUsername && password == CorrectPassword)
-			{
-				MessageBox.Show("Login successful!", "Apoteka MG Pharm", MessageBoxButtons.OK, MessageBoxIcon.Information);
-				Form2 form2 = new Form2();
-				form2.Show();
-				this.Hide();
-			}
-			else
-			{
-				MessageBox.Show("Invalid username or password. Please try again.", "Apoteka MG Pharm", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-		}
-
-
+	
 
 		private void btnZatvori_Click(object sender, EventArgs e)
 		{
@@ -116,7 +96,7 @@ namespace Apoteka
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-
+			
 		}
 
 		private void textBox1_TextChanged(object sender, EventArgs e)
@@ -143,7 +123,99 @@ namespace Apoteka
 		{
 
 		}
+
+		MySqlConnection conn = new MySqlConnection("User Id = root; Host = localhost; Database= apoteka");
+
+		private void AdminLoginForm_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (e.KeyChar == (char)Keys.Enter)
+			{
+				btnLogin.PerformClick();
+			}
+		}
+
+		private void AdminLoginForm_Load(object sender, EventArgs e)
+		{
+			boxNivo.SelectedIndex = 0;
+		}
+
+		private void btnLogin_Click(object sender, EventArgs e)
+		{
+
+			if (txtUsername.Text == "" && txtPassword.Text == "") //Error when all text box are not fill
+			{
+				MessageBox.Show("Niste uneli ni jedan podatak!", "Greska!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			else if (txtUsername.Text == "") //Error when all text box are not fill
+			{
+				MessageBox.Show("Niste uneli Korisnicko ime!", "Greska!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			else if (txtPassword.Text == "") //Error when all text box are not fill
+			{
+				MessageBox.Show("Niste uneli lozinku!", "Greska!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+		}
+			else
+			{
+				try
+				{
+
+					MySqlCommand SelectCommand = new MySqlCommand("select * from apoteka.prijava where korisnik='" + this.txtUsername.Text + "' and sifra='" + this.txtPassword.Text + "' ;", conn);
+
+					MySqlDataReader myReader;
+
+					conn.Open();
+					myReader = SelectCommand.ExecuteReader();
+					int count = 0;
+					string nivo = string.Empty;
+					while (myReader.Read())
+					{
+						count = count + 1;
+						nivo = myReader["nivo"].ToString();
+					}
+					if (count == 1)
+					{
+
+						if (nivo == "admin" && nivo == boxNivo.SelectedItem.ToString())
+						{
+							this.Hide();
+							MainForm admin_Forma = new MainForm();
+							admin_Forma.Show();
+							MessageBox.Show("Uspesno ste ulogovani.", "Confirmation Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+						}
+
+						else if (nivo == "korisnik" && nivo == boxNivo.SelectedItem.ToString())
+						{
+							this.Hide();
+							KorisnikLoginForm korisnik_Forma = new KorisnikLoginForm();
+							korisnik_Forma.Show();
+							MessageBox.Show("Uspesno ste ulogovani.", "Confirmation Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+						}
+						else
+						{
+							MessageBox.Show("Profil nije na tom nivou.", "Greska!");
+						}
+
+					}
+					else
+					{
+						MessageBox.Show("Uneti podaci su netacni!", "Greska!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+						conn.Close();
+					}
+
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show(ex.Message);
+				}
+
+			}
+		}
 	}
-	}
+}
+
+	
+
 
 

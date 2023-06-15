@@ -1,6 +1,6 @@
 ﻿namespace Apoteka
 {
-	partial class Form1
+	partial class LoginForm
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -33,6 +33,7 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel5 = new System.Windows.Forms.Panel();
+			this.boxNivo = new System.Windows.Forms.ComboBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.txtPassword = new System.Windows.Forms.TextBox();
 			this.txtUsername = new System.Windows.Forms.TextBox();
@@ -40,6 +41,7 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.btnLogin = new System.Windows.Forms.Button();
 			this.skladistenjeTableAdapter1 = new Apoteka.apotekaDataSetTableAdapters.skladistenjeTableAdapter();
+			this.label3 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.SuspendLayout();
@@ -89,6 +91,8 @@
 			// panel5
 			// 
 			this.panel5.BackColor = System.Drawing.Color.White;
+			this.panel5.Controls.Add(this.label3);
+			this.panel5.Controls.Add(this.boxNivo);
 			this.panel5.Controls.Add(this.button1);
 			this.panel5.Controls.Add(this.txtPassword);
 			this.panel5.Controls.Add(this.txtUsername);
@@ -101,11 +105,23 @@
 			this.panel5.TabIndex = 27;
 			this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
 			// 
+			// boxNivo
+			// 
+			this.boxNivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.boxNivo.FormattingEnabled = true;
+			this.boxNivo.Items.AddRange(new object[] {
+            "admin",
+            "korisnik"});
+			this.boxNivo.Location = new System.Drawing.Point(25, 161);
+			this.boxNivo.Name = "boxNivo";
+			this.boxNivo.Size = new System.Drawing.Size(117, 21);
+			this.boxNivo.TabIndex = 30;
+			// 
 			// button1
 			// 
 			this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
 			this.button1.ForeColor = System.Drawing.Color.Black;
-			this.button1.Location = new System.Drawing.Point(332, 154);
+			this.button1.Location = new System.Drawing.Point(333, 154);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(81, 30);
 			this.button1.TabIndex = 29;
@@ -138,7 +154,7 @@
 			this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.label6.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label6.ForeColor = System.Drawing.Color.Black;
-			this.label6.Location = new System.Drawing.Point(24, 82);
+			this.label6.Location = new System.Drawing.Point(25, 82);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(52, 26);
 			this.label6.TabIndex = 25;
@@ -151,7 +167,7 @@
 			this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.label5.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label5.ForeColor = System.Drawing.Color.Black;
-			this.label5.Location = new System.Drawing.Point(24, 35);
+			this.label5.Location = new System.Drawing.Point(25, 35);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(134, 26);
 			this.label5.TabIndex = 24;
@@ -162,18 +178,32 @@
 			// 
 			this.btnLogin.BackColor = System.Drawing.Color.LightSteelBlue;
 			this.btnLogin.ForeColor = System.Drawing.Color.Black;
-			this.btnLogin.Location = new System.Drawing.Point(229, 154);
+			this.btnLogin.Location = new System.Drawing.Point(230, 154);
 			this.btnLogin.Name = "btnLogin";
 			this.btnLogin.Size = new System.Drawing.Size(81, 30);
 			this.btnLogin.TabIndex = 15;
 			this.btnLogin.Text = "Uloguj se";
 			this.btnLogin.UseVisualStyleBackColor = false;
+			this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
 			// 
 			// skladistenjeTableAdapter1
 			// 
 			this.skladistenjeTableAdapter1.ClearBeforeFill = true;
 			// 
-			// Form1
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.BackColor = System.Drawing.Color.LightSteelBlue;
+			this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.label3.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.ForeColor = System.Drawing.Color.Black;
+			this.label3.Location = new System.Drawing.Point(25, 132);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(129, 26);
+			this.label3.TabIndex = 31;
+			this.label3.Text = "Izaberite Nivo";
+			// 
+			// LoginForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -181,7 +211,7 @@
 			this.ClientSize = new System.Drawing.Size(1222, 500);
 			this.Controls.Add(this.panel5);
 			this.Controls.Add(this.panel1);
-			this.Name = "Form1";
+			this.Name = "LoginForm";
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.panel1.ResumeLayout(false);
@@ -205,5 +235,7 @@
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Button btnLogin;
 		private apotekaDataSetTableAdapters.skladistenjeTableAdapter skladistenjeTableAdapter1;
+		private System.Windows.Forms.ComboBox boxNivo;
+		private System.Windows.Forms.Label label3;
 	}
 }

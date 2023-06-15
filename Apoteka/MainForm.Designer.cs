@@ -1,6 +1,6 @@
 ﻿namespace Apoteka
 {
-	partial class Form2
+	partial class MainForm
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.btnKategorijeLekova = new System.Windows.Forms.Button();
 			this.btnDobavljaci = new System.Windows.Forms.Button();
 			this.btnSkladistenje = new System.Windows.Forms.Button();
@@ -39,6 +39,10 @@
 			this.btnIstorijaProdaje = new System.Windows.Forms.Button();
 			this.btnKupci = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.button4 = new System.Windows.Forms.Button();
+			this.button3 = new System.Windows.Forms.Button();
+			this.button2 = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.panel3 = new System.Windows.Forms.Panel();
@@ -53,59 +57,70 @@
 			// btnKategorijeLekova
 			// 
 			this.btnKategorijeLekova.BackColor = System.Drawing.Color.LightSteelBlue;
-			this.btnKategorijeLekova.Location = new System.Drawing.Point(49, 155);
+			this.btnKategorijeLekova.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnKategorijeLekova.Location = new System.Drawing.Point(41, 139);
 			this.btnKategorijeLekova.Name = "btnKategorijeLekova";
-			this.btnKategorijeLekova.Size = new System.Drawing.Size(116, 30);
+			this.btnKategorijeLekova.Size = new System.Drawing.Size(135, 42);
 			this.btnKategorijeLekova.TabIndex = 11;
 			this.btnKategorijeLekova.Text = "Kategorije Lekova";
 			this.btnKategorijeLekova.UseVisualStyleBackColor = false;
+			this.btnKategorijeLekova.Click += new System.EventHandler(this.btnKategorijeLekova_Click);
 			// 
 			// btnDobavljaci
 			// 
 			this.btnDobavljaci.BackColor = System.Drawing.Color.LightSteelBlue;
-			this.btnDobavljaci.Location = new System.Drawing.Point(49, 323);
+			this.btnDobavljaci.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnDobavljaci.Location = new System.Drawing.Point(41, 307);
 			this.btnDobavljaci.Name = "btnDobavljaci";
-			this.btnDobavljaci.Size = new System.Drawing.Size(116, 30);
+			this.btnDobavljaci.Size = new System.Drawing.Size(135, 42);
 			this.btnDobavljaci.TabIndex = 10;
 			this.btnDobavljaci.Text = "Dobavljaci";
 			this.btnDobavljaci.UseVisualStyleBackColor = false;
+			this.btnDobavljaci.Click += new System.EventHandler(this.btnDobavljaci_Click);
 			// 
 			// btnSkladistenje
 			// 
 			this.btnSkladistenje.BackColor = System.Drawing.Color.LightSteelBlue;
-			this.btnSkladistenje.Location = new System.Drawing.Point(49, 243);
+			this.btnSkladistenje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSkladistenje.Location = new System.Drawing.Point(41, 227);
 			this.btnSkladistenje.Name = "btnSkladistenje";
-			this.btnSkladistenje.Size = new System.Drawing.Size(116, 30);
+			this.btnSkladistenje.Size = new System.Drawing.Size(135, 42);
 			this.btnSkladistenje.TabIndex = 9;
 			this.btnSkladistenje.Text = "Skladistenje";
 			this.btnSkladistenje.UseVisualStyleBackColor = false;
+			this.btnSkladistenje.Click += new System.EventHandler(this.btnSkladistenje_Click);
 			// 
 			// btnNarudzbine
 			// 
 			this.btnNarudzbine.BackColor = System.Drawing.Color.LightSteelBlue;
-			this.btnNarudzbine.Location = new System.Drawing.Point(55, 159);
+			this.btnNarudzbine.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnNarudzbine.Location = new System.Drawing.Point(55, 141);
 			this.btnNarudzbine.Name = "btnNarudzbine";
-			this.btnNarudzbine.Size = new System.Drawing.Size(116, 30);
+			this.btnNarudzbine.Size = new System.Drawing.Size(135, 42);
 			this.btnNarudzbine.TabIndex = 8;
 			this.btnNarudzbine.Text = "Narudzbine";
 			this.btnNarudzbine.UseVisualStyleBackColor = false;
+			this.btnNarudzbine.Click += new System.EventHandler(this.btnNarudzbine_Click);
 			// 
 			// btnRacuni
 			// 
 			this.btnRacuni.BackColor = System.Drawing.Color.LightSteelBlue;
-			this.btnRacuni.Location = new System.Drawing.Point(55, 73);
+			this.btnRacuni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnRacuni.Location = new System.Drawing.Point(55, 55);
 			this.btnRacuni.Name = "btnRacuni";
-			this.btnRacuni.Size = new System.Drawing.Size(116, 32);
+			this.btnRacuni.Size = new System.Drawing.Size(135, 44);
 			this.btnRacuni.TabIndex = 7;
 			this.btnRacuni.Text = "Racuni";
 			this.btnRacuni.UseVisualStyleBackColor = false;
+			this.btnRacuni.Click += new System.EventHandler(this.btnRacuni_Click);
 			// 
 			// btnLekovi
 			// 
 			this.btnLekovi.BackColor = System.Drawing.Color.LightSteelBlue;
-			this.btnLekovi.Location = new System.Drawing.Point(49, 71);
+			this.btnLekovi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnLekovi.Location = new System.Drawing.Point(41, 55);
 			this.btnLekovi.Name = "btnLekovi";
-			this.btnLekovi.Size = new System.Drawing.Size(116, 30);
+			this.btnLekovi.Size = new System.Drawing.Size(135, 42);
 			this.btnLekovi.TabIndex = 6;
 			this.btnLekovi.Text = "Lekovi";
 			this.btnLekovi.UseVisualStyleBackColor = false;
@@ -113,9 +128,9 @@
 			// 
 			// btnZatvori
 			// 
-			this.btnZatvori.Location = new System.Drawing.Point(546, 481);
+			this.btnZatvori.Location = new System.Drawing.Point(648, 469);
 			this.btnZatvori.Name = "btnZatvori";
-			this.btnZatvori.Size = new System.Drawing.Size(116, 30);
+			this.btnZatvori.Size = new System.Drawing.Size(129, 42);
 			this.btnZatvori.TabIndex = 12;
 			this.btnZatvori.Text = "Zatvori";
 			this.btnZatvori.UseVisualStyleBackColor = true;
@@ -124,36 +139,88 @@
 			// btnIstorijaProdaje
 			// 
 			this.btnIstorijaProdaje.BackColor = System.Drawing.Color.LightSteelBlue;
-			this.btnIstorijaProdaje.Location = new System.Drawing.Point(55, 327);
+			this.btnIstorijaProdaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnIstorijaProdaje.Location = new System.Drawing.Point(55, 309);
 			this.btnIstorijaProdaje.Name = "btnIstorijaProdaje";
-			this.btnIstorijaProdaje.Size = new System.Drawing.Size(116, 30);
+			this.btnIstorijaProdaje.Size = new System.Drawing.Size(135, 42);
 			this.btnIstorijaProdaje.TabIndex = 13;
 			this.btnIstorijaProdaje.Text = "Istorija Prodaje";
 			this.btnIstorijaProdaje.UseVisualStyleBackColor = false;
+			this.btnIstorijaProdaje.Click += new System.EventHandler(this.btnIstorijaProdaje_Click);
 			// 
 			// btnKupci
 			// 
 			this.btnKupci.BackColor = System.Drawing.Color.LightSteelBlue;
-			this.btnKupci.Location = new System.Drawing.Point(55, 247);
+			this.btnKupci.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnKupci.Location = new System.Drawing.Point(55, 229);
 			this.btnKupci.Name = "btnKupci";
-			this.btnKupci.Size = new System.Drawing.Size(116, 30);
+			this.btnKupci.Size = new System.Drawing.Size(135, 42);
 			this.btnKupci.TabIndex = 14;
 			this.btnKupci.Text = "Kupci";
 			this.btnKupci.UseVisualStyleBackColor = false;
+			this.btnKupci.Click += new System.EventHandler(this.btnKupci_Click);
 			// 
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.White;
 			this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panel1.Controls.Add(this.button4);
+			this.panel1.Controls.Add(this.button3);
 			this.panel1.Controls.Add(this.btnRacuni);
+			this.panel1.Controls.Add(this.button2);
 			this.panel1.Controls.Add(this.btnNarudzbine);
+			this.panel1.Controls.Add(this.button1);
 			this.panel1.Controls.Add(this.btnIstorijaProdaje);
 			this.panel1.Controls.Add(this.btnKupci);
-			this.panel1.Location = new System.Drawing.Point(1015, 119);
+			this.panel1.Location = new System.Drawing.Point(1103, 119);
 			this.panel1.Name = "panel1";
 			this.panel1.Padding = new System.Windows.Forms.Padding(52);
 			this.panel1.Size = new System.Drawing.Size(222, 396);
 			this.panel1.TabIndex = 23;
+			// 
+			// button4
+			// 
+			this.button4.BackColor = System.Drawing.Color.LightSteelBlue;
+			this.button4.Location = new System.Drawing.Point(-984, 57);
+			this.button4.Name = "button4";
+			this.button4.Size = new System.Drawing.Size(135, 42);
+			this.button4.TabIndex = 6;
+			this.button4.Text = "Lekovi";
+			this.button4.UseVisualStyleBackColor = false;
+			this.button4.Click += new System.EventHandler(this.btnLekovi_Click);
+			// 
+			// button3
+			// 
+			this.button3.BackColor = System.Drawing.Color.LightSteelBlue;
+			this.button3.Location = new System.Drawing.Point(-984, 141);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(135, 42);
+			this.button3.TabIndex = 11;
+			this.button3.Text = "Kategorije Lekova";
+			this.button3.UseVisualStyleBackColor = false;
+			this.button3.Click += new System.EventHandler(this.btnKategorijeLekova_Click);
+			// 
+			// button2
+			// 
+			this.button2.BackColor = System.Drawing.Color.LightSteelBlue;
+			this.button2.Location = new System.Drawing.Point(-984, 309);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(135, 42);
+			this.button2.TabIndex = 10;
+			this.button2.Text = "Dobavljaci";
+			this.button2.UseVisualStyleBackColor = false;
+			this.button2.Click += new System.EventHandler(this.btnDobavljaci_Click);
+			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
+			this.button1.Location = new System.Drawing.Point(-984, 229);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(135, 42);
+			this.button1.TabIndex = 9;
+			this.button1.Text = "Skladistenje";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.btnSkladistenje_Click);
 			// 
 			// panel2
 			// 
@@ -163,7 +230,7 @@
 			this.panel2.Controls.Add(this.btnKategorijeLekova);
 			this.panel2.Controls.Add(this.btnDobavljaci);
 			this.panel2.Controls.Add(this.btnSkladistenje);
-			this.panel2.Location = new System.Drawing.Point(12, 119);
+			this.panel2.Location = new System.Drawing.Point(78, 119);
 			this.panel2.Name = "panel2";
 			this.panel2.Padding = new System.Windows.Forms.Padding(52);
 			this.panel2.Size = new System.Drawing.Size(222, 392);
@@ -188,7 +255,7 @@
 			this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel3.Location = new System.Drawing.Point(0, 0);
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(1237, 113);
+			this.panel3.Size = new System.Drawing.Size(1354, 113);
 			this.panel3.TabIndex = 25;
 			// 
 			// label2
@@ -196,7 +263,7 @@
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label2.ForeColor = System.Drawing.Color.White;
-			this.label2.Location = new System.Drawing.Point(593, 68);
+			this.label2.Location = new System.Drawing.Point(643, 68);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(83, 25);
 			this.label2.TabIndex = 1;
@@ -208,24 +275,24 @@
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("MV Boli", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.ForeColor = System.Drawing.Color.White;
-			this.label3.Location = new System.Drawing.Point(538, 22);
+			this.label3.Location = new System.Drawing.Point(588, 22);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(197, 46);
 			this.label3.TabIndex = 0;
 			this.label3.Text = "MG Pharm";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
-			// Form2
+			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.CornflowerBlue;
-			this.ClientSize = new System.Drawing.Size(1237, 557);
+			this.ClientSize = new System.Drawing.Size(1354, 557);
 			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.btnZatvori);
-			this.Name = "Form2";
+			this.Name = "MainForm";
 			this.Text = "Form2";
 			this.Load += new System.EventHandler(this.Form2_Load);
 			this.panel1.ResumeLayout(false);
@@ -254,6 +321,10 @@
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Button button4;
+		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button button1;
 	}
 }
 

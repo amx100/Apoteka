@@ -44,6 +44,8 @@ namespace Apoteka {
         
         private skladistenjeDataTable tableskladistenje;
         
+        private stanje_lekovaDataTable tablestanje_lekova;
+        
         private global::System.Data.DataRelation relationfk_cene_lekovi_id;
         
         private global::System.Data.DataRelation relationfk_historija_prodaje_kupci_id;
@@ -121,6 +123,9 @@ namespace Apoteka {
                 }
                 if ((ds.Tables["skladistenje"] != null)) {
                     base.Tables.Add(new skladistenjeDataTable(ds.Tables["skladistenje"]));
+                }
+                if ((ds.Tables["stanje_lekova"] != null)) {
+                    base.Tables.Add(new stanje_lekovaDataTable(ds.Tables["stanje_lekova"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -242,6 +247,16 @@ namespace Apoteka {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public stanje_lekovaDataTable stanje_lekova {
+            get {
+                return this.tablestanje_lekova;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -337,6 +352,9 @@ namespace Apoteka {
                 if ((ds.Tables["skladistenje"] != null)) {
                     base.Tables.Add(new skladistenjeDataTable(ds.Tables["skladistenje"]));
                 }
+                if ((ds.Tables["stanje_lekova"] != null)) {
+                    base.Tables.Add(new stanje_lekovaDataTable(ds.Tables["stanje_lekova"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -430,6 +448,12 @@ namespace Apoteka {
                     this.tableskladistenje.InitVars();
                 }
             }
+            this.tablestanje_lekova = ((stanje_lekovaDataTable)(base.Tables["stanje_lekova"]));
+            if ((initTable == true)) {
+                if ((this.tablestanje_lekova != null)) {
+                    this.tablestanje_lekova.InitVars();
+                }
+            }
             this.relationfk_cene_lekovi_id = this.Relations["fk_cene_lekovi_id"];
             this.relationfk_historija_prodaje_kupci_id = this.Relations["fk_historija_prodaje_kupci_id"];
             this.relationfk_historija_prodaje_lekovi_id = this.Relations["fk_historija_prodaje_lekovi_id"];
@@ -470,6 +494,8 @@ namespace Apoteka {
             base.Tables.Add(this.tableracuni);
             this.tableskladistenje = new skladistenjeDataTable();
             base.Tables.Add(this.tableskladistenje);
+            this.tablestanje_lekova = new stanje_lekovaDataTable();
+            base.Tables.Add(this.tablestanje_lekova);
             this.relationfk_cene_lekovi_id = new global::System.Data.DataRelation("fk_cene_lekovi_id", new global::System.Data.DataColumn[] {
                         this.tablelekovi.lekovi_idColumn}, new global::System.Data.DataColumn[] {
                         this.tablecene.lekovi_idColumn}, false);
@@ -574,6 +600,12 @@ namespace Apoteka {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializestanje_lekova() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -656,6 +688,9 @@ namespace Apoteka {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void skladistenjeRowChangeEventHandler(object sender, skladistenjeRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void stanje_lekovaRowChangeEventHandler(object sender, stanje_lekovaRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2783,7 +2818,6 @@ namespace Apoteka {
                 this.columnlekovi_id.AllowDBNull = false;
                 this.columnkupci_id.AllowDBNull = false;
                 this.columnkolicina.AllowDBNull = false;
-                this.columndatum.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3883,6 +3917,282 @@ namespace Apoteka {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class stanje_lekovaDataTable : global::System.Data.TypedTableBase<stanje_lekovaRow> {
+            
+            private global::System.Data.DataColumn columnlekovi_id;
+            
+            private global::System.Data.DataColumn columnnaziv;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public stanje_lekovaDataTable() {
+                this.TableName = "stanje_lekova";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal stanje_lekovaDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected stanje_lekovaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn lekovi_idColumn {
+                get {
+                    return this.columnlekovi_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn nazivColumn {
+                get {
+                    return this.columnnaziv;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public stanje_lekovaRow this[int index] {
+                get {
+                    return ((stanje_lekovaRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event stanje_lekovaRowChangeEventHandler stanje_lekovaRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event stanje_lekovaRowChangeEventHandler stanje_lekovaRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event stanje_lekovaRowChangeEventHandler stanje_lekovaRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event stanje_lekovaRowChangeEventHandler stanje_lekovaRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Addstanje_lekovaRow(stanje_lekovaRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public stanje_lekovaRow Addstanje_lekovaRow(string naziv) {
+                stanje_lekovaRow rowstanje_lekovaRow = ((stanje_lekovaRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        naziv};
+                rowstanje_lekovaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowstanje_lekovaRow);
+                return rowstanje_lekovaRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public stanje_lekovaRow FindBylekovi_id(int lekovi_id) {
+                return ((stanje_lekovaRow)(this.Rows.Find(new object[] {
+                            lekovi_id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                stanje_lekovaDataTable cln = ((stanje_lekovaDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new stanje_lekovaDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnlekovi_id = base.Columns["lekovi_id"];
+                this.columnnaziv = base.Columns["naziv"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnlekovi_id = new global::System.Data.DataColumn("lekovi_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlekovi_id);
+                this.columnnaziv = new global::System.Data.DataColumn("naziv", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnaziv);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnlekovi_id}, true));
+                this.columnlekovi_id.AutoIncrement = true;
+                this.columnlekovi_id.AutoIncrementSeed = -1;
+                this.columnlekovi_id.AutoIncrementStep = -1;
+                this.columnlekovi_id.AllowDBNull = false;
+                this.columnlekovi_id.Unique = true;
+                this.columnnaziv.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public stanje_lekovaRow Newstanje_lekovaRow() {
+                return ((stanje_lekovaRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new stanje_lekovaRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(stanje_lekovaRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.stanje_lekovaRowChanged != null)) {
+                    this.stanje_lekovaRowChanged(this, new stanje_lekovaRowChangeEvent(((stanje_lekovaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.stanje_lekovaRowChanging != null)) {
+                    this.stanje_lekovaRowChanging(this, new stanje_lekovaRowChangeEvent(((stanje_lekovaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.stanje_lekovaRowDeleted != null)) {
+                    this.stanje_lekovaRowDeleted(this, new stanje_lekovaRowChangeEvent(((stanje_lekovaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.stanje_lekovaRowDeleting != null)) {
+                    this.stanje_lekovaRowDeleting(this, new stanje_lekovaRowChangeEvent(((stanje_lekovaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Removestanje_lekovaRow(stanje_lekovaRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                apotekaDataSet ds = new apotekaDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "stanje_lekovaDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class ceneRow : global::System.Data.DataRow {
@@ -4496,7 +4806,12 @@ namespace Apoteka {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public System.DateTime datum {
                 get {
-                    return ((global::System.DateTime)(this[this.tablenarudzbine.datumColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tablenarudzbine.datumColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'datum\' in table \'narudzbine\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablenarudzbine.datumColumn] = value;
@@ -4523,6 +4838,18 @@ namespace Apoteka {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["narudzbine_ibfk_2"]);
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsdatumNull() {
+                return this.IsNull(this.tablenarudzbine.datumColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetdatumNull() {
+                this[this.tablenarudzbine.datumColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4787,6 +5114,43 @@ namespace Apoteka {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["fk_skladistenje_lekovi_id"]);
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class stanje_lekovaRow : global::System.Data.DataRow {
+            
+            private stanje_lekovaDataTable tablestanje_lekova;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal stanje_lekovaRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablestanje_lekova = ((stanje_lekovaDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int lekovi_id {
+                get {
+                    return ((int)(this[this.tablestanje_lekova.lekovi_idColumn]));
+                }
+                set {
+                    this[this.tablestanje_lekova.lekovi_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string naziv {
+                get {
+                    return ((string)(this[this.tablestanje_lekova.nazivColumn]));
+                }
+                set {
+                    this[this.tablestanje_lekova.nazivColumn] = value;
                 }
             }
         }
@@ -5117,6 +5481,40 @@ namespace Apoteka {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public skladistenjeRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class stanje_lekovaRowChangeEvent : global::System.EventArgs {
+            
+            private stanje_lekovaRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public stanje_lekovaRowChangeEvent(stanje_lekovaRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public stanje_lekovaRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -8260,12 +8658,17 @@ namespace Apoteka.apotekaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_narudzbine_id, int Original_lekovi_id, int Original_kupci_id, long Original_kolicina, System.DateTime Original_datum) {
+        public virtual int Delete(int Original_narudzbine_id, int Original_lekovi_id, int Original_kupci_id, long Original_kolicina, global::System.Nullable<global::System.DateTime> Original_datum) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_narudzbine_id));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_lekovi_id));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_kupci_id));
             this.Adapter.DeleteCommand.Parameters[3].Value = ((long)(Original_kolicina));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_datum));
+            if ((Original_datum.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_datum.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8286,11 +8689,16 @@ namespace Apoteka.apotekaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int lekovi_id, int kupci_id, long kolicina, System.DateTime datum) {
+        public virtual int Insert(int lekovi_id, int kupci_id, long kolicina, global::System.Nullable<global::System.DateTime> datum) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(lekovi_id));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(kupci_id));
             this.Adapter.InsertCommand.Parameters[2].Value = ((long)(kolicina));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(datum));
+            if ((datum.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(datum.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8311,16 +8719,26 @@ namespace Apoteka.apotekaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int lekovi_id, int kupci_id, long kolicina, System.DateTime datum, int Original_narudzbine_id, int Original_lekovi_id, int Original_kupci_id, long Original_kolicina, System.DateTime Original_datum) {
+        public virtual int Update(int lekovi_id, int kupci_id, long kolicina, global::System.Nullable<global::System.DateTime> datum, int Original_narudzbine_id, int Original_lekovi_id, int Original_kupci_id, long Original_kolicina, global::System.Nullable<global::System.DateTime> Original_datum) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(lekovi_id));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(kupci_id));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((long)(kolicina));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(datum));
+            if ((datum.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(datum.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_narudzbine_id));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_lekovi_id));
             this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_kupci_id));
             this.Adapter.UpdateCommand.Parameters[7].Value = ((long)(Original_kolicina));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_datum));
+            if ((Original_datum.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_datum.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9664,6 +10082,174 @@ namespace Apoteka.apotekaDataSetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class stanje_lekovaTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::Devart.Data.MySql.MySqlDataAdapter _adapter;
+        
+        private global::Devart.Data.MySql.MySqlConnection _connection;
+        
+        private global::System.Data.Common.DbTransaction _transaction;
+        
+        private global::Devart.Data.MySql.MySqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public stanje_lekovaTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::Devart.Data.MySql.MySqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::Devart.Data.MySql.MySqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::Devart.Data.MySql.MySqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.Common.DbTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::Devart.Data.MySql.MySqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::Devart.Data.MySql.MySqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "stanje_lekova";
+            tableMapping.ColumnMappings.Add("lekovi_id", "lekovi_id");
+            tableMapping.ColumnMappings.Add("naziv", "naziv");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::Devart.Data.MySql.MySqlConnection();
+            this._connection.ConnectionString = global::Apoteka.Properties.Settings.Default.apotekaConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::Devart.Data.MySql.MySqlCommand[1];
+            this._commandCollection[0] = new global::Devart.Data.MySql.MySqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT lekovi_id, naziv FROM apoteka.stanje_lekova";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(apotekaDataSet.stanje_lekovaDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual apotekaDataSet.stanje_lekovaDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            apotekaDataSet.stanje_lekovaDataTable dataTable = new apotekaDataSet.stanje_lekovaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     
