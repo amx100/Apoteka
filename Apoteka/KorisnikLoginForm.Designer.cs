@@ -52,6 +52,7 @@
 			this.button10 = new System.Windows.Forms.Button();
 			this.button11 = new System.Windows.Forms.Button();
 			this.button12 = new System.Windows.Forms.Button();
+			this.button13 = new System.Windows.Forms.Button();
 			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.panel1.SuspendLayout();
@@ -224,6 +225,7 @@
 			// 
 			this.panel2.BackColor = System.Drawing.Color.White;
 			this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panel2.Controls.Add(this.button13);
 			this.panel2.Controls.Add(this.button5);
 			this.panel2.Controls.Add(this.button6);
 			this.panel2.Controls.Add(this.button7);
@@ -262,7 +264,7 @@
 			// 
 			this.button7.BackColor = System.Drawing.Color.LightSteelBlue;
 			this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button7.Location = new System.Drawing.Point(55, 36);
+			this.button7.Location = new System.Drawing.Point(55, 320);
 			this.button7.Name = "button7";
 			this.button7.Size = new System.Drawing.Size(135, 44);
 			this.button7.TabIndex = 7;
@@ -284,7 +286,7 @@
 			// 
 			this.button9.BackColor = System.Drawing.Color.LightSteelBlue;
 			this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button9.Location = new System.Drawing.Point(55, 112);
+			this.button9.Location = new System.Drawing.Point(55, 100);
 			this.button9.Name = "button9";
 			this.button9.Size = new System.Drawing.Size(135, 42);
 			this.button9.TabIndex = 8;
@@ -306,7 +308,7 @@
 			// 
 			this.button11.BackColor = System.Drawing.Color.LightSteelBlue;
 			this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button11.Location = new System.Drawing.Point(55, 276);
+			this.button11.Location = new System.Drawing.Point(55, 249);
 			this.button11.Name = "button11";
 			this.button11.Size = new System.Drawing.Size(135, 42);
 			this.button11.TabIndex = 13;
@@ -318,13 +320,25 @@
 			// 
 			this.button12.BackColor = System.Drawing.Color.LightSteelBlue;
 			this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button12.Location = new System.Drawing.Point(55, 192);
+			this.button12.Location = new System.Drawing.Point(55, 173);
 			this.button12.Name = "button12";
 			this.button12.Size = new System.Drawing.Size(135, 42);
 			this.button12.TabIndex = 14;
 			this.button12.Text = "Prodaja po Kupcima";
 			this.button12.UseVisualStyleBackColor = false;
 			this.button12.Click += new System.EventHandler(this.button12_Click);
+			// 
+			// button13
+			// 
+			this.button13.BackColor = System.Drawing.Color.LightSteelBlue;
+			this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button13.Location = new System.Drawing.Point(55, 38);
+			this.button13.Name = "button13";
+			this.button13.Size = new System.Drawing.Size(135, 42);
+			this.button13.TabIndex = 15;
+			this.button13.Text = "Sve o Lekovima";
+			this.button13.UseVisualStyleBackColor = false;
+			this.button13.Click += new System.EventHandler(this.button13_Click);
 			// 
 			// KorisnikLoginForm
 			// 
@@ -373,5 +387,6 @@
 		private System.Windows.Forms.Button button10;
 		private System.Windows.Forms.Button button11;
 		private System.Windows.Forms.Button button12;
+		private System.Windows.Forms.Button button13;
 	}
 }

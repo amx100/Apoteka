@@ -120,6 +120,30 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="lekovi_viewTableAdapter" GeneratorDataComponentClassName="lekovi_viewTableAdapter" Name="lekovi_view" UserDataComponentName="lekovi_viewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="apotekaConnectionString (Settings)" DbObjectName="apoteka.lekovi_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT lekovi_id, naziv, sastav, doziranje_mg, uputstvo, rok_trajanja, kategorija, kolicina, cena FROM apoteka.lekovi_view</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="lekovi_id" DataSetColumn="lekovi_id" />
+              <Mapping SourceColumn="naziv" DataSetColumn="naziv" />
+              <Mapping SourceColumn="sastav" DataSetColumn="sastav" />
+              <Mapping SourceColumn="doziranje_mg" DataSetColumn="doziranje_mg" />
+              <Mapping SourceColumn="uputstvo" DataSetColumn="uputstvo" />
+              <Mapping SourceColumn="rok_trajanja" DataSetColumn="rok_trajanja" />
+              <Mapping SourceColumn="kategorija" DataSetColumn="kategorija" />
+              <Mapping SourceColumn="kolicina" DataSetColumn="kolicina" />
+              <Mapping SourceColumn="cena" DataSetColumn="cena" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -128,62 +152,77 @@
   <xs:element name="apotekaDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="apotekaDataSet1" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="apotekaDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="vw_historija_prodaje" msprop:Generator_RowClassName="vw_historija_prodajeRow" msprop:Generator_RowEvHandlerName="vw_historija_prodajeRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_historija_prodajeRowDeleted" msprop:Generator_RowDeletingName="vw_historija_prodajeRowDeleting" msprop:Generator_RowEvArgName="vw_historija_prodajeRowChangeEvent" msprop:Generator_TablePropName="vw_historija_prodaje" msprop:Generator_RowChangedName="vw_historija_prodajeRowChanged" msprop:Generator_UserTableName="vw_historija_prodaje" msprop:Generator_RowChangingName="vw_historija_prodajeRowChanging" msprop:Generator_TableClassName="vw_historija_prodajeDataTable" msprop:Generator_TableVarName="tablevw_historija_prodaje">
+        <xs:element name="vw_historija_prodaje" msprop:Generator_RowEvHandlerName="vw_historija_prodajeRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_historija_prodajeRowDeleted" msprop:Generator_RowDeletingName="vw_historija_prodajeRowDeleting" msprop:Generator_RowEvArgName="vw_historija_prodajeRowChangeEvent" msprop:Generator_TablePropName="vw_historija_prodaje" msprop:Generator_RowChangedName="vw_historija_prodajeRowChanged" msprop:Generator_UserTableName="vw_historija_prodaje" msprop:Generator_RowChangingName="vw_historija_prodajeRowChanging" msprop:Generator_RowClassName="vw_historija_prodajeRow" msprop:Generator_TableClassName="vw_historija_prodajeDataTable" msprop:Generator_TableVarName="tablevw_historija_prodaje">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="historija_prodaje_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="historija_prodaje_id" msprop:Generator_ColumnPropNameInTable="historija_prodaje_idColumn" msprop:Generator_ColumnPropNameInRow="historija_prodaje_id" msprop:Generator_ColumnVarNameInTable="columnhistorija_prodaje_id" type="xs:int" />
-              <xs:element name="ime" msprop:Generator_UserColumnName="ime" msprop:Generator_ColumnPropNameInTable="imeColumn" msprop:Generator_ColumnPropNameInRow="ime" msprop:Generator_ColumnVarNameInTable="columnime" type="xs:string" />
-              <xs:element name="prezime" msprop:Generator_UserColumnName="prezime" msprop:Generator_ColumnPropNameInTable="prezimeColumn" msprop:Generator_ColumnPropNameInRow="prezime" msprop:Generator_ColumnVarNameInTable="columnprezime" type="xs:string" />
-              <xs:element name="naziv" msprop:Generator_UserColumnName="naziv" msprop:Generator_ColumnPropNameInTable="nazivColumn" msprop:Generator_ColumnPropNameInRow="naziv" msprop:Generator_ColumnVarNameInTable="columnnaziv" type="xs:string" />
-              <xs:element name="kolicina" msprop:Generator_UserColumnName="kolicina" msprop:Generator_ColumnPropNameInTable="kolicinaColumn" msprop:Generator_ColumnPropNameInRow="kolicina" msprop:Generator_ColumnVarNameInTable="columnkolicina" type="xs:long" />
-              <xs:element name="datum" msprop:Generator_UserColumnName="datum" msprop:Generator_ColumnPropNameInTable="datumColumn" msprop:Generator_ColumnPropNameInRow="datum" msprop:Generator_ColumnVarNameInTable="columndatum" type="xs:dateTime" />
+              <xs:element name="historija_prodaje_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="historija_prodaje_idColumn" msprop:Generator_ColumnPropNameInRow="historija_prodaje_id" msprop:Generator_UserColumnName="historija_prodaje_id" msprop:Generator_ColumnVarNameInTable="columnhistorija_prodaje_id" type="xs:int" />
+              <xs:element name="ime" msprop:Generator_ColumnPropNameInTable="imeColumn" msprop:Generator_ColumnPropNameInRow="ime" msprop:Generator_UserColumnName="ime" msprop:Generator_ColumnVarNameInTable="columnime" type="xs:string" />
+              <xs:element name="prezime" msprop:Generator_ColumnPropNameInTable="prezimeColumn" msprop:Generator_ColumnPropNameInRow="prezime" msprop:Generator_UserColumnName="prezime" msprop:Generator_ColumnVarNameInTable="columnprezime" type="xs:string" />
+              <xs:element name="naziv" msprop:Generator_ColumnPropNameInTable="nazivColumn" msprop:Generator_ColumnPropNameInRow="naziv" msprop:Generator_UserColumnName="naziv" msprop:Generator_ColumnVarNameInTable="columnnaziv" type="xs:string" />
+              <xs:element name="kolicina" msprop:Generator_ColumnPropNameInTable="kolicinaColumn" msprop:Generator_ColumnPropNameInRow="kolicina" msprop:Generator_UserColumnName="kolicina" msprop:Generator_ColumnVarNameInTable="columnkolicina" type="xs:long" />
+              <xs:element name="datum" msprop:Generator_ColumnPropNameInTable="datumColumn" msprop:Generator_ColumnPropNameInRow="datum" msprop:Generator_UserColumnName="datum" msprop:Generator_ColumnVarNameInTable="columndatum" type="xs:dateTime" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vw_lekovi_kategorije" msprop:Generator_RowClassName="vw_lekovi_kategorijeRow" msprop:Generator_RowEvHandlerName="vw_lekovi_kategorijeRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_lekovi_kategorijeRowDeleted" msprop:Generator_RowDeletingName="vw_lekovi_kategorijeRowDeleting" msprop:Generator_RowEvArgName="vw_lekovi_kategorijeRowChangeEvent" msprop:Generator_TablePropName="vw_lekovi_kategorije" msprop:Generator_RowChangedName="vw_lekovi_kategorijeRowChanged" msprop:Generator_UserTableName="vw_lekovi_kategorije" msprop:Generator_RowChangingName="vw_lekovi_kategorijeRowChanging" msprop:Generator_TableClassName="vw_lekovi_kategorijeDataTable" msprop:Generator_TableVarName="tablevw_lekovi_kategorije">
+        <xs:element name="vw_lekovi_kategorije" msprop:Generator_RowEvHandlerName="vw_lekovi_kategorijeRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_lekovi_kategorijeRowDeleted" msprop:Generator_RowDeletingName="vw_lekovi_kategorijeRowDeleting" msprop:Generator_RowEvArgName="vw_lekovi_kategorijeRowChangeEvent" msprop:Generator_TablePropName="vw_lekovi_kategorije" msprop:Generator_RowChangedName="vw_lekovi_kategorijeRowChanged" msprop:Generator_UserTableName="vw_lekovi_kategorije" msprop:Generator_RowChangingName="vw_lekovi_kategorijeRowChanging" msprop:Generator_RowClassName="vw_lekovi_kategorijeRow" msprop:Generator_TableClassName="vw_lekovi_kategorijeDataTable" msprop:Generator_TableVarName="tablevw_lekovi_kategorije">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="lekovi_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="lekovi_idColumn" msprop:Generator_ColumnPropNameInRow="lekovi_id" msprop:Generator_UserColumnName="lekovi_id" msprop:Generator_ColumnVarNameInTable="columnlekovi_id" type="xs:int" />
+              <xs:element name="naziv" msprop:Generator_ColumnPropNameInTable="nazivColumn" msprop:Generator_ColumnPropNameInRow="naziv" msprop:Generator_UserColumnName="naziv" msprop:Generator_ColumnVarNameInTable="columnnaziv" type="xs:string" />
+              <xs:element name="sastav" msprop:Generator_ColumnPropNameInTable="sastavColumn" msprop:Generator_ColumnPropNameInRow="sastav" msprop:Generator_UserColumnName="sastav" msprop:Generator_ColumnVarNameInTable="columnsastav" type="xs:string" />
+              <xs:element name="kategorija" msprop:Generator_ColumnPropNameInTable="kategorijaColumn" msprop:Generator_ColumnPropNameInRow="kategorija" msprop:Generator_UserColumnName="kategorija" msprop:Generator_ColumnVarNameInTable="columnkategorija" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_prodaja" msprop:Generator_RowEvHandlerName="vw_prodajaRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_prodajaRowDeleted" msprop:Generator_RowDeletingName="vw_prodajaRowDeleting" msprop:Generator_RowEvArgName="vw_prodajaRowChangeEvent" msprop:Generator_TablePropName="vw_prodaja" msprop:Generator_RowChangedName="vw_prodajaRowChanged" msprop:Generator_UserTableName="vw_prodaja" msprop:Generator_RowChangingName="vw_prodajaRowChanging" msprop:Generator_RowClassName="vw_prodajaRow" msprop:Generator_TableClassName="vw_prodajaDataTable" msprop:Generator_TableVarName="tablevw_prodaja">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ime" msprop:Generator_ColumnPropNameInTable="imeColumn" msprop:Generator_ColumnPropNameInRow="ime" msprop:Generator_UserColumnName="ime" msprop:Generator_ColumnVarNameInTable="columnime" type="xs:string" />
+              <xs:element name="prezime" msprop:Generator_ColumnPropNameInTable="prezimeColumn" msprop:Generator_ColumnPropNameInRow="prezime" msprop:Generator_UserColumnName="prezime" msprop:Generator_ColumnVarNameInTable="columnprezime" type="xs:string" />
+              <xs:element name="naziv" msprop:Generator_ColumnPropNameInTable="nazivColumn" msprop:Generator_ColumnPropNameInRow="naziv" msprop:Generator_UserColumnName="naziv" msprop:Generator_ColumnVarNameInTable="columnnaziv" type="xs:string" />
+              <xs:element name="kolicina" msprop:Generator_ColumnPropNameInTable="kolicinaColumn" msprop:Generator_ColumnPropNameInRow="kolicina" msprop:Generator_UserColumnName="kolicina" msprop:Generator_ColumnVarNameInTable="columnkolicina" type="xs:long" />
+              <xs:element name="datum" msprop:Generator_ColumnPropNameInTable="datumColumn" msprop:Generator_ColumnPropNameInRow="datum" msprop:Generator_UserColumnName="datum" msprop:Generator_ColumnVarNameInTable="columndatum" type="xs:dateTime" />
+              <xs:element name="ukupna_cena" msprop:Generator_ColumnPropNameInTable="ukupna_cenaColumn" msprop:Generator_ColumnPropNameInRow="ukupna_cena" msprop:Generator_UserColumnName="ukupna_cena" msprop:Generator_ColumnVarNameInTable="columnukupna_cena" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_suma_prodaje" msprop:Generator_RowEvHandlerName="vw_suma_prodajeRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_suma_prodajeRowDeleted" msprop:Generator_RowDeletingName="vw_suma_prodajeRowDeleting" msprop:Generator_RowEvArgName="vw_suma_prodajeRowChangeEvent" msprop:Generator_TablePropName="vw_suma_prodaje" msprop:Generator_RowChangedName="vw_suma_prodajeRowChanged" msprop:Generator_UserTableName="vw_suma_prodaje" msprop:Generator_RowChangingName="vw_suma_prodajeRowChanging" msprop:Generator_RowClassName="vw_suma_prodajeRow" msprop:Generator_TableClassName="vw_suma_prodajeDataTable" msprop:Generator_TableVarName="tablevw_suma_prodaje">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="naziv" msprop:Generator_ColumnPropNameInTable="nazivColumn" msprop:Generator_ColumnPropNameInRow="naziv" msprop:Generator_UserColumnName="naziv" msprop:Generator_ColumnVarNameInTable="columnnaziv" type="xs:string" />
+              <xs:element name="ukupna_cena" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="ukupna_cenaColumn" msprop:Generator_ColumnPropNameInRow="ukupna_cena" msprop:Generator_UserColumnName="ukupna_cena" msprop:Generator_ColumnVarNameInTable="columnukupna_cena" type="xs:decimal" minOccurs="0" />
+              <xs:element name="datum" msprop:Generator_ColumnPropNameInTable="datumColumn" msprop:Generator_ColumnPropNameInRow="datum" msprop:Generator_UserColumnName="datum" msprop:Generator_ColumnVarNameInTable="columndatum" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_ukupna_cena_po_dobavljacu" msprop:Generator_RowEvHandlerName="vw_ukupna_cena_po_dobavljacuRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_ukupna_cena_po_dobavljacuRowDeleted" msprop:Generator_RowDeletingName="vw_ukupna_cena_po_dobavljacuRowDeleting" msprop:Generator_RowEvArgName="vw_ukupna_cena_po_dobavljacuRowChangeEvent" msprop:Generator_TablePropName="vw_ukupna_cena_po_dobavljacu" msprop:Generator_RowChangedName="vw_ukupna_cena_po_dobavljacuRowChanged" msprop:Generator_UserTableName="vw_ukupna_cena_po_dobavljacu" msprop:Generator_RowChangingName="vw_ukupna_cena_po_dobavljacuRowChanging" msprop:Generator_RowClassName="vw_ukupna_cena_po_dobavljacuRow" msprop:Generator_TableClassName="vw_ukupna_cena_po_dobavljacuDataTable" msprop:Generator_TableVarName="tablevw_ukupna_cena_po_dobavljacu">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dobavljac" msprop:Generator_ColumnPropNameInTable="dobavljacColumn" msprop:Generator_ColumnPropNameInRow="dobavljac" msprop:Generator_UserColumnName="dobavljac" msprop:Generator_ColumnVarNameInTable="columndobavljac" type="xs:string" />
+              <xs:element name="ukupna_cena" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="ukupna_cenaColumn" msprop:Generator_ColumnPropNameInRow="ukupna_cena" msprop:Generator_UserColumnName="ukupna_cena" msprop:Generator_ColumnVarNameInTable="columnukupna_cena" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="stanje_lekova" msprop:Generator_RowClassName="stanje_lekovaRow" msprop:Generator_RowEvHandlerName="stanje_lekovaRowChangeEventHandler" msprop:Generator_RowDeletedName="stanje_lekovaRowDeleted" msprop:Generator_RowDeletingName="stanje_lekovaRowDeleting" msprop:Generator_RowEvArgName="stanje_lekovaRowChangeEvent" msprop:Generator_TablePropName="stanje_lekova" msprop:Generator_RowChangedName="stanje_lekovaRowChanged" msprop:Generator_UserTableName="stanje_lekova" msprop:Generator_RowChangingName="stanje_lekovaRowChanging" msprop:Generator_TableClassName="stanje_lekovaDataTable" msprop:Generator_TableVarName="tablestanje_lekova">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="lekovi_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="lekovi_id" msprop:Generator_ColumnPropNameInTable="lekovi_idColumn" msprop:Generator_ColumnPropNameInRow="lekovi_id" msprop:Generator_ColumnVarNameInTable="columnlekovi_id" type="xs:int" />
               <xs:element name="naziv" msprop:Generator_UserColumnName="naziv" msprop:Generator_ColumnPropNameInTable="nazivColumn" msprop:Generator_ColumnPropNameInRow="naziv" msprop:Generator_ColumnVarNameInTable="columnnaziv" type="xs:string" />
-              <xs:element name="sastav" msprop:Generator_UserColumnName="sastav" msprop:Generator_ColumnPropNameInTable="sastavColumn" msprop:Generator_ColumnPropNameInRow="sastav" msprop:Generator_ColumnVarNameInTable="columnsastav" type="xs:string" />
-              <xs:element name="kategorija" msprop:Generator_UserColumnName="kategorija" msprop:Generator_ColumnPropNameInTable="kategorijaColumn" msprop:Generator_ColumnPropNameInRow="kategorija" msprop:Generator_ColumnVarNameInTable="columnkategorija" type="xs:string" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vw_prodaja" msprop:Generator_RowClassName="vw_prodajaRow" msprop:Generator_RowEvHandlerName="vw_prodajaRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_prodajaRowDeleted" msprop:Generator_RowDeletingName="vw_prodajaRowDeleting" msprop:Generator_RowEvArgName="vw_prodajaRowChangeEvent" msprop:Generator_TablePropName="vw_prodaja" msprop:Generator_RowChangedName="vw_prodajaRowChanged" msprop:Generator_UserTableName="vw_prodaja" msprop:Generator_RowChangingName="vw_prodajaRowChanging" msprop:Generator_TableClassName="vw_prodajaDataTable" msprop:Generator_TableVarName="tablevw_prodaja">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="ime" msprop:Generator_UserColumnName="ime" msprop:Generator_ColumnPropNameInTable="imeColumn" msprop:Generator_ColumnPropNameInRow="ime" msprop:Generator_ColumnVarNameInTable="columnime" type="xs:string" />
-              <xs:element name="prezime" msprop:Generator_UserColumnName="prezime" msprop:Generator_ColumnPropNameInTable="prezimeColumn" msprop:Generator_ColumnPropNameInRow="prezime" msprop:Generator_ColumnVarNameInTable="columnprezime" type="xs:string" />
-              <xs:element name="naziv" msprop:Generator_UserColumnName="naziv" msprop:Generator_ColumnPropNameInTable="nazivColumn" msprop:Generator_ColumnPropNameInRow="naziv" msprop:Generator_ColumnVarNameInTable="columnnaziv" type="xs:string" />
-              <xs:element name="kolicina" msprop:Generator_UserColumnName="kolicina" msprop:Generator_ColumnPropNameInTable="kolicinaColumn" msprop:Generator_ColumnPropNameInRow="kolicina" msprop:Generator_ColumnVarNameInTable="columnkolicina" type="xs:long" />
-              <xs:element name="datum" msprop:Generator_UserColumnName="datum" msprop:Generator_ColumnPropNameInTable="datumColumn" msprop:Generator_ColumnPropNameInRow="datum" msprop:Generator_ColumnVarNameInTable="columndatum" type="xs:dateTime" />
-              <xs:element name="ukupna_cena" msprop:Generator_UserColumnName="ukupna_cena" msprop:Generator_ColumnPropNameInTable="ukupna_cenaColumn" msprop:Generator_ColumnPropNameInRow="ukupna_cena" msprop:Generator_ColumnVarNameInTable="columnukupna_cena" type="xs:decimal" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="vw_suma_prodaje" msprop:Generator_RowClassName="vw_suma_prodajeRow" msprop:Generator_RowEvHandlerName="vw_suma_prodajeRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_suma_prodajeRowDeleted" msprop:Generator_RowDeletingName="vw_suma_prodajeRowDeleting" msprop:Generator_RowEvArgName="vw_suma_prodajeRowChangeEvent" msprop:Generator_TablePropName="vw_suma_prodaje" msprop:Generator_RowChangedName="vw_suma_prodajeRowChanged" msprop:Generator_UserTableName="vw_suma_prodaje" msprop:Generator_RowChangingName="vw_suma_prodajeRowChanging" msprop:Generator_TableClassName="vw_suma_prodajeDataTable" msprop:Generator_TableVarName="tablevw_suma_prodaje">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="naziv" msprop:Generator_UserColumnName="naziv" msprop:Generator_ColumnPropNameInTable="nazivColumn" msprop:Generator_ColumnPropNameInRow="naziv" msprop:Generator_ColumnVarNameInTable="columnnaziv" type="xs:string" />
-              <xs:element name="ukupna_cena" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ukupna_cena" msprop:Generator_ColumnPropNameInTable="ukupna_cenaColumn" msprop:Generator_ColumnPropNameInRow="ukupna_cena" msprop:Generator_ColumnVarNameInTable="columnukupna_cena" type="xs:decimal" minOccurs="0" />
-              <xs:element name="datum" msprop:Generator_UserColumnName="datum" msprop:Generator_ColumnPropNameInTable="datumColumn" msprop:Generator_ColumnPropNameInRow="datum" msprop:Generator_ColumnVarNameInTable="columndatum" type="xs:dateTime" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="vw_ukupna_cena_po_dobavljacu" msprop:Generator_RowClassName="vw_ukupna_cena_po_dobavljacuRow" msprop:Generator_RowEvHandlerName="vw_ukupna_cena_po_dobavljacuRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_ukupna_cena_po_dobavljacuRowDeleted" msprop:Generator_RowDeletingName="vw_ukupna_cena_po_dobavljacuRowDeleting" msprop:Generator_RowEvArgName="vw_ukupna_cena_po_dobavljacuRowChangeEvent" msprop:Generator_TablePropName="vw_ukupna_cena_po_dobavljacu" msprop:Generator_RowChangedName="vw_ukupna_cena_po_dobavljacuRowChanged" msprop:Generator_UserTableName="vw_ukupna_cena_po_dobavljacu" msprop:Generator_RowChangingName="vw_ukupna_cena_po_dobavljacuRowChanging" msprop:Generator_TableClassName="vw_ukupna_cena_po_dobavljacuDataTable" msprop:Generator_TableVarName="tablevw_ukupna_cena_po_dobavljacu">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="dobavljac" msprop:Generator_UserColumnName="dobavljac" msprop:Generator_ColumnPropNameInTable="dobavljacColumn" msprop:Generator_ColumnPropNameInRow="dobavljac" msprop:Generator_ColumnVarNameInTable="columndobavljac" type="xs:string" />
-              <xs:element name="ukupna_cena" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ukupna_cena" msprop:Generator_ColumnPropNameInTable="ukupna_cenaColumn" msprop:Generator_ColumnPropNameInRow="ukupna_cena" msprop:Generator_ColumnVarNameInTable="columnukupna_cena" type="xs:decimal" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="stanje_lekova" msprop:Generator_RowEvHandlerName="stanje_lekovaRowChangeEventHandler" msprop:Generator_RowDeletedName="stanje_lekovaRowDeleted" msprop:Generator_RowDeletingName="stanje_lekovaRowDeleting" msprop:Generator_RowEvArgName="stanje_lekovaRowChangeEvent" msprop:Generator_TablePropName="stanje_lekova" msprop:Generator_RowChangedName="stanje_lekovaRowChanged" msprop:Generator_RowChangingName="stanje_lekovaRowChanging" msprop:Generator_TableClassName="stanje_lekovaDataTable" msprop:Generator_RowClassName="stanje_lekovaRow" msprop:Generator_TableVarName="tablestanje_lekova" msprop:Generator_UserTableName="stanje_lekova">
+        <xs:element name="lekovi_view" msprop:Generator_RowEvHandlerName="lekovi_viewRowChangeEventHandler" msprop:Generator_RowDeletedName="lekovi_viewRowDeleted" msprop:Generator_RowDeletingName="lekovi_viewRowDeleting" msprop:Generator_RowEvArgName="lekovi_viewRowChangeEvent" msprop:Generator_TablePropName="lekovi_view" msprop:Generator_RowChangedName="lekovi_viewRowChanged" msprop:Generator_RowChangingName="lekovi_viewRowChanging" msprop:Generator_TableClassName="lekovi_viewDataTable" msprop:Generator_RowClassName="lekovi_viewRow" msprop:Generator_TableVarName="tablelekovi_view" msprop:Generator_UserTableName="lekovi_view">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="lekovi_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="lekovi_id" msprop:Generator_ColumnPropNameInTable="lekovi_idColumn" msprop:Generator_ColumnVarNameInTable="columnlekovi_id" msprop:Generator_UserColumnName="lekovi_id" type="xs:int" />
               <xs:element name="naziv" msprop:Generator_ColumnPropNameInRow="naziv" msprop:Generator_ColumnPropNameInTable="nazivColumn" msprop:Generator_ColumnVarNameInTable="columnnaziv" msprop:Generator_UserColumnName="naziv" type="xs:string" />
+              <xs:element name="sastav" msprop:Generator_ColumnPropNameInRow="sastav" msprop:Generator_ColumnPropNameInTable="sastavColumn" msprop:Generator_ColumnVarNameInTable="columnsastav" msprop:Generator_UserColumnName="sastav" type="xs:string" />
+              <xs:element name="doziranje_mg" msprop:Generator_ColumnPropNameInRow="doziranje_mg" msprop:Generator_ColumnPropNameInTable="doziranje_mgColumn" msprop:Generator_ColumnVarNameInTable="columndoziranje_mg" msprop:Generator_UserColumnName="doziranje_mg" type="xs:long" />
+              <xs:element name="uputstvo" msprop:Generator_ColumnPropNameInRow="uputstvo" msprop:Generator_ColumnPropNameInTable="uputstvoColumn" msprop:Generator_ColumnVarNameInTable="columnuputstvo" msprop:Generator_UserColumnName="uputstvo" type="xs:string" />
+              <xs:element name="rok_trajanja" msprop:Generator_ColumnPropNameInRow="rok_trajanja" msprop:Generator_ColumnPropNameInTable="rok_trajanjaColumn" msprop:Generator_ColumnVarNameInTable="columnrok_trajanja" msprop:Generator_UserColumnName="rok_trajanja" type="xs:dateTime" />
+              <xs:element name="kategorija" msprop:Generator_ColumnPropNameInRow="kategorija" msprop:Generator_ColumnPropNameInTable="kategorijaColumn" msprop:Generator_ColumnVarNameInTable="columnkategorija" msprop:Generator_UserColumnName="kategorija" type="xs:string" />
+              <xs:element name="kolicina" msprop:Generator_ColumnPropNameInRow="kolicina" msprop:Generator_ColumnPropNameInTable="kolicinaColumn" msprop:Generator_ColumnVarNameInTable="columnkolicina" msprop:Generator_UserColumnName="kolicina" type="xs:int" />
+              <xs:element name="cena" msprop:Generator_ColumnPropNameInRow="cena" msprop:Generator_ColumnPropNameInTable="cenaColumn" msprop:Generator_ColumnVarNameInTable="columncena" msprop:Generator_UserColumnName="cena" type="xs:decimal" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -199,6 +238,10 @@
     </xs:unique>
     <xs:unique name="stanje_lekova_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:stanje_lekova" />
+      <xs:field xpath="mstns:lekovi_id" />
+    </xs:unique>
+    <xs:unique name="lekovi_view_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:lekovi_view" />
       <xs:field xpath="mstns:lekovi_id" />
     </xs:unique>
   </xs:element>

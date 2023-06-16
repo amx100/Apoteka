@@ -83,6 +83,25 @@ namespace Apoteka
 			HistorijaProdajeForm Historija = new HistorijaProdajeForm();
 			Historija.Show();
 		}
+
+		private void button5_Click(object sender, EventArgs e)
+		{
+			KorisniciForm Korisnici = new KorisniciForm();
+			Korisnici.Show();
+		}
+
+		private void button6_Click(object sender, EventArgs e)
+		{
+			RepForm Report = new RepForm();
+			Report.Show();
+		}
+
+		private void button7_Click(object sender, EventArgs e)
+		{
+			LoginForm Login = new LoginForm();
+			Login.Show();
+			this.Close();
+		}
 	}
 	}
 

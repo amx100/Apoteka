@@ -33,15 +33,14 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel5 = new System.Windows.Forms.Panel();
+			this.label3 = new System.Windows.Forms.Label();
 			this.boxNivo = new System.Windows.Forms.ComboBox();
-			this.button1 = new System.Windows.Forms.Button();
 			this.txtPassword = new System.Windows.Forms.TextBox();
 			this.txtUsername = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.btnLogin = new System.Windows.Forms.Button();
 			this.skladistenjeTableAdapter1 = new Apoteka.apotekaDataSetTableAdapters.skladistenjeTableAdapter();
-			this.label3 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.SuspendLayout();
@@ -93,7 +92,6 @@
 			this.panel5.BackColor = System.Drawing.Color.White;
 			this.panel5.Controls.Add(this.label3);
 			this.panel5.Controls.Add(this.boxNivo);
-			this.panel5.Controls.Add(this.button1);
 			this.panel5.Controls.Add(this.txtPassword);
 			this.panel5.Controls.Add(this.txtUsername);
 			this.panel5.Controls.Add(this.label6);
@@ -104,6 +102,19 @@
 			this.panel5.Size = new System.Drawing.Size(485, 332);
 			this.panel5.TabIndex = 27;
 			this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.BackColor = System.Drawing.Color.LightSteelBlue;
+			this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.label3.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.ForeColor = System.Drawing.Color.Black;
+			this.label3.Location = new System.Drawing.Point(25, 132);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(129, 26);
+			this.label3.TabIndex = 31;
+			this.label3.Text = "Izaberite Nivo";
 			// 
 			// boxNivo
 			// 
@@ -116,17 +127,6 @@
 			this.boxNivo.Name = "boxNivo";
 			this.boxNivo.Size = new System.Drawing.Size(117, 21);
 			this.boxNivo.TabIndex = 30;
-			// 
-			// button1
-			// 
-			this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
-			this.button1.ForeColor = System.Drawing.Color.Black;
-			this.button1.Location = new System.Drawing.Point(333, 154);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(81, 30);
-			this.button1.TabIndex = 29;
-			this.button1.Text = "Obrisi";
-			this.button1.UseVisualStyleBackColor = false;
 			// 
 			// txtPassword
 			// 
@@ -178,7 +178,7 @@
 			// 
 			this.btnLogin.BackColor = System.Drawing.Color.LightSteelBlue;
 			this.btnLogin.ForeColor = System.Drawing.Color.Black;
-			this.btnLogin.Location = new System.Drawing.Point(230, 154);
+			this.btnLogin.Location = new System.Drawing.Point(285, 152);
 			this.btnLogin.Name = "btnLogin";
 			this.btnLogin.Size = new System.Drawing.Size(81, 30);
 			this.btnLogin.TabIndex = 15;
@@ -190,19 +190,6 @@
 			// 
 			this.skladistenjeTableAdapter1.ClearBeforeFill = true;
 			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.BackColor = System.Drawing.Color.LightSteelBlue;
-			this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label3.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.ForeColor = System.Drawing.Color.Black;
-			this.label3.Location = new System.Drawing.Point(25, 132);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(129, 26);
-			this.label3.TabIndex = 31;
-			this.label3.Text = "Izaberite Nivo";
-			// 
 			// LoginForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,6 +198,7 @@
 			this.ClientSize = new System.Drawing.Size(1222, 500);
 			this.Controls.Add(this.panel5);
 			this.Controls.Add(this.panel1);
+			this.MaximizeBox = false;
 			this.Name = "LoginForm";
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
@@ -228,7 +216,6 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Panel panel5;
-		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.TextBox txtPassword;
 		private System.Windows.Forms.TextBox txtUsername;
 		private System.Windows.Forms.Label label6;

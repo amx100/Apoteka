@@ -78,8 +78,14 @@ namespace Apoteka
 
 		private void button11_Click(object sender, EventArgs e)
 		{
-			LekoviPoKategorijiForm LekoviPK = new LekoviPoKategorijiForm();
+			VwLekoviPoKategorijiForm LekoviPK = new VwLekoviPoKategorijiForm();
 			LekoviPK.Show();
+		}
+
+		private void button13_Click(object sender, EventArgs e)
+		{
+			VwLekoviForm Lekovi = new VwLekoviForm();
+			Lekovi.Show();
 		}
 	}
 }

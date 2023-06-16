@@ -54,6 +54,10 @@
 			this.button2 = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.datumDateTimePicker = new System.Windows.Forms.DateTimePicker();
+			this.apotekaDataSet2 = new Apoteka.apotekaDataSet2();
+			this.narudzbineBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+			this.narudzbineTableAdapter1 = new Apoteka.apotekaDataSet2TableAdapters.narudzbineTableAdapter();
+			this.tableAdapterManager1 = new Apoteka.apotekaDataSet2TableAdapters.TableAdapterManager();
 			narudzbine_idLabel = new System.Windows.Forms.Label();
 			lekovi_idLabel = new System.Windows.Forms.Label();
 			kupci_idLabel = new System.Windows.Forms.Label();
@@ -62,6 +66,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.apotekaDataSet)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.narudzbineBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.narudzbineDataGridView)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.apotekaDataSet2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.narudzbineBindingSource1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// narudzbine_idLabel
@@ -304,6 +310,36 @@
 			this.datumDateTimePicker.TabIndex = 11;
 			this.datumDateTimePicker.Value = new System.DateTime(2023, 6, 15, 7, 13, 42, 0);
 			// 
+			// apotekaDataSet2
+			// 
+			this.apotekaDataSet2.DataSetName = "apotekaDataSet2";
+			this.apotekaDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// narudzbineBindingSource1
+			// 
+			this.narudzbineBindingSource1.DataMember = "narudzbine";
+			this.narudzbineBindingSource1.DataSource = this.apotekaDataSet2;
+			// 
+			// narudzbineTableAdapter1
+			// 
+			this.narudzbineTableAdapter1.ClearBeforeFill = true;
+			// 
+			// tableAdapterManager1
+			// 
+			this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+			this.tableAdapterManager1.ceneTableAdapter = null;
+			this.tableAdapterManager1.dobavljaciTableAdapter = null;
+			this.tableAdapterManager1.historija_prodajeTableAdapter = null;
+			this.tableAdapterManager1.kategorije_lekovaTableAdapter = null;
+			this.tableAdapterManager1.kupciTableAdapter = null;
+			this.tableAdapterManager1.lekoviTableAdapter = null;
+			this.tableAdapterManager1.narudzbineTableAdapter = this.narudzbineTableAdapter1;
+			this.tableAdapterManager1.prijavaTableAdapter = null;
+			this.tableAdapterManager1.promocije_popustiTableAdapter = null;
+			this.tableAdapterManager1.racuniTableAdapter = null;
+			this.tableAdapterManager1.skladistenjeTableAdapter = null;
+			this.tableAdapterManager1.UpdateOrder = Apoteka.apotekaDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+			// 
 			// NarudzbineForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,6 +369,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.apotekaDataSet)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.narudzbineBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.narudzbineDataGridView)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.apotekaDataSet2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.narudzbineBindingSource1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -360,5 +398,9 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn kupciidDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn kolicinaDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn datumDataGridViewTextBoxColumn;
+		private apotekaDataSet2 apotekaDataSet2;
+		private System.Windows.Forms.BindingSource narudzbineBindingSource1;
+		private apotekaDataSet2TableAdapters.narudzbineTableAdapter narudzbineTableAdapter1;
+		private apotekaDataSet2TableAdapters.TableAdapterManager tableAdapterManager1;
 	}
 }

@@ -42,12 +42,12 @@
 			this.tableAdapterManager = new Apoteka.apotekaDataSetTableAdapters.TableAdapterManager();
 			this.kategorije_lekovaTableAdapter1 = new Apoteka.apotekaDataSetTableAdapters.kategorije_lekovaTableAdapter();
 			this.kategorije_lekovaDataGridView = new System.Windows.Forms.DataGridView();
-			this.kategorije_lekova_idTextBox = new System.Windows.Forms.TextBox();
-			this.nazivTextBox = new System.Windows.Forms.TextBox();
-			this.opisTextBox = new System.Windows.Forms.TextBox();
 			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.kategorije_lekova_idTextBox = new System.Windows.Forms.TextBox();
+			this.nazivTextBox = new System.Windows.Forms.TextBox();
+			this.opisTextBox = new System.Windows.Forms.TextBox();
 			kategorije_lekova_idLabel = new System.Windows.Forms.Label();
 			nazivLabel = new System.Windows.Forms.Label();
 			opisLabel = new System.Windows.Forms.Label();
@@ -59,30 +59,30 @@
 			// kategorije_lekova_idLabel
 			// 
 			kategorije_lekova_idLabel.AutoSize = true;
-			kategorije_lekova_idLabel.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			kategorije_lekova_idLabel.Location = new System.Drawing.Point(250, 130);
+			kategorije_lekova_idLabel.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			kategorije_lekova_idLabel.Location = new System.Drawing.Point(250, 134);
 			kategorije_lekova_idLabel.Name = "kategorije_lekova_idLabel";
-			kategorije_lekova_idLabel.Size = new System.Drawing.Size(35, 23);
+			kategorije_lekova_idLabel.Size = new System.Drawing.Size(30, 19);
 			kategorije_lekova_idLabel.TabIndex = 38;
 			kategorije_lekova_idLabel.Text = "ID:";
 			// 
 			// nazivLabel
 			// 
 			nazivLabel.AutoSize = true;
-			nazivLabel.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			nazivLabel.Location = new System.Drawing.Point(559, 130);
+			nazivLabel.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			nazivLabel.Location = new System.Drawing.Point(559, 134);
 			nazivLabel.Name = "nazivLabel";
-			nazivLabel.Size = new System.Drawing.Size(58, 23);
+			nazivLabel.Size = new System.Drawing.Size(51, 19);
 			nazivLabel.TabIndex = 40;
 			nazivLabel.Text = "naziv:";
 			// 
 			// opisLabel
 			// 
 			opisLabel.AutoSize = true;
-			opisLabel.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			opisLabel.Location = new System.Drawing.Point(902, 130);
+			opisLabel.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			opisLabel.Location = new System.Drawing.Point(902, 134);
 			opisLabel.Name = "opisLabel";
-			opisLabel.Size = new System.Drawing.Size(50, 23);
+			opisLabel.Size = new System.Drawing.Size(43, 19);
 			opisLabel.TabIndex = 42;
 			opisLabel.Text = "opis:";
 			// 
@@ -191,6 +191,27 @@
 			this.kategorije_lekovaDataGridView.Size = new System.Drawing.Size(1002, 260);
 			this.kategorije_lekovaDataGridView.TabIndex = 38;
 			// 
+			// dataGridViewTextBoxColumn1
+			// 
+			this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.dataGridViewTextBoxColumn1.DataPropertyName = "kategorije_lekova_id";
+			this.dataGridViewTextBoxColumn1.HeaderText = "kategorije_lekova_id";
+			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+			// 
+			// dataGridViewTextBoxColumn2
+			// 
+			this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.dataGridViewTextBoxColumn2.DataPropertyName = "naziv";
+			this.dataGridViewTextBoxColumn2.HeaderText = "naziv";
+			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+			// 
+			// dataGridViewTextBoxColumn3
+			// 
+			this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.dataGridViewTextBoxColumn3.DataPropertyName = "opis";
+			this.dataGridViewTextBoxColumn3.HeaderText = "opis";
+			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+			// 
 			// kategorije_lekova_idTextBox
 			// 
 			this.kategorije_lekova_idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kategorije_lekovabindingSource1, "kategorije_lekova_id", true));
@@ -217,27 +238,6 @@
 			this.opisTextBox.Name = "opisTextBox";
 			this.opisTextBox.Size = new System.Drawing.Size(227, 24);
 			this.opisTextBox.TabIndex = 43;
-			// 
-			// dataGridViewTextBoxColumn1
-			// 
-			this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.dataGridViewTextBoxColumn1.DataPropertyName = "kategorije_lekova_id";
-			this.dataGridViewTextBoxColumn1.HeaderText = "kategorije_lekova_id";
-			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-			// 
-			// dataGridViewTextBoxColumn2
-			// 
-			this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.dataGridViewTextBoxColumn2.DataPropertyName = "naziv";
-			this.dataGridViewTextBoxColumn2.HeaderText = "naziv";
-			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-			// 
-			// dataGridViewTextBoxColumn3
-			// 
-			this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.dataGridViewTextBoxColumn3.DataPropertyName = "opis";
-			this.dataGridViewTextBoxColumn3.HeaderText = "opis";
-			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
 			// 
 			// KategorijeLekovaForm
 			// 
