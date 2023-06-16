@@ -42,5 +42,10 @@ namespace Apoteka
 			crystalReportViewer1.ReportSource = reportDocument;
 			crystalReportViewer1.Refresh();
 		}
+
+		private void LekoviReportForm1_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

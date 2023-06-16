@@ -63,9 +63,9 @@
 			this.label1.Font = new System.Drawing.Font("Sitka Small", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.Location = new System.Drawing.Point(518, 24);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(233, 35);
+			this.label1.Size = new System.Drawing.Size(243, 35);
 			this.label1.TabIndex = 43;
-			this.label1.Text = "Podaci o izvestaju";
+			this.label1.Text = "Izvestaj o kupcima";
 			// 
 			// RepForm
 			// 
