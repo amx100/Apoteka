@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Apoteka.ViewForme
 {
-	public partial class LekoviPoKategorijiForm : Form
+	public partial class VwLekoviPoKategorijiForm : Form
 	{
-		public LekoviPoKategorijiForm()
+		public VwLekoviPoKategorijiForm()
 		{
 			InitializeComponent();
 		}
