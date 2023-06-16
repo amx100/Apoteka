@@ -92,8 +92,8 @@ namespace Apoteka
 
 		private void button6_Click(object sender, EventArgs e)
 		{
-			RepForm Report = new RepForm();
-			Report.Show();
+			LekoviReportForm1 LekoviReport = new LekoviReportForm1();
+			LekoviReport.Show();
 		}
 
 		private void button7_Click(object sender, EventArgs e)
@@ -101,6 +101,12 @@ namespace Apoteka
 			LoginForm Login = new LoginForm();
 			Login.Show();
 			this.Close();
+		}
+
+		private void button8_Click(object sender, EventArgs e)
+		{
+			RepForm Report = new RepForm();
+			Report.Show();
 		}
 	}
 	}

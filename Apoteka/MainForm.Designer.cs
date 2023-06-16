@@ -51,10 +51,14 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.button7 = new System.Windows.Forms.Button();
+			this.panel4 = new System.Windows.Forms.Panel();
+			this.label1 = new System.Windows.Forms.Label();
+			this.button8 = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.panel3.SuspendLayout();
+			this.panel4.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// btnKategorijeLekova
@@ -73,7 +77,7 @@
 			// 
 			this.btnDobavljaci.BackColor = System.Drawing.Color.LightSteelBlue;
 			this.btnDobavljaci.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnDobavljaci.Location = new System.Drawing.Point(41, 307);
+			this.btnDobavljaci.Location = new System.Drawing.Point(41, 267);
 			this.btnDobavljaci.Name = "btnDobavljaci";
 			this.btnDobavljaci.Size = new System.Drawing.Size(135, 42);
 			this.btnDobavljaci.TabIndex = 10;
@@ -141,9 +145,9 @@
 			// 
 			// btnIstorijaProdaje
 			// 
-			this.btnIstorijaProdaje.BackColor = System.Drawing.Color.LightSteelBlue;
+			this.btnIstorijaProdaje.BackColor = System.Drawing.Color.AliceBlue;
 			this.btnIstorijaProdaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnIstorijaProdaje.Location = new System.Drawing.Point(55, 309);
+			this.btnIstorijaProdaje.Location = new System.Drawing.Point(228, 83);
 			this.btnIstorijaProdaje.Name = "btnIstorijaProdaje";
 			this.btnIstorijaProdaje.Size = new System.Drawing.Size(135, 42);
 			this.btnIstorijaProdaje.TabIndex = 13;
@@ -174,7 +178,6 @@
 			this.panel1.Controls.Add(this.button2);
 			this.panel1.Controls.Add(this.btnNarudzbine);
 			this.panel1.Controls.Add(this.button1);
-			this.panel1.Controls.Add(this.btnIstorijaProdaje);
 			this.panel1.Controls.Add(this.btnKupci);
 			this.panel1.Location = new System.Drawing.Point(1103, 119);
 			this.panel1.Name = "panel1";
@@ -186,7 +189,7 @@
 			// 
 			this.button5.BackColor = System.Drawing.Color.LightSteelBlue;
 			this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button5.Location = new System.Drawing.Point(55, 244);
+			this.button5.Location = new System.Drawing.Point(55, 267);
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(135, 42);
 			this.button5.TabIndex = 15;
@@ -242,7 +245,6 @@
 			// 
 			this.panel2.BackColor = System.Drawing.Color.White;
 			this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.panel2.Controls.Add(this.button6);
 			this.panel2.Controls.Add(this.btnLekovi);
 			this.panel2.Controls.Add(this.btnKategorijeLekova);
 			this.panel2.Controls.Add(this.btnDobavljaci);
@@ -255,13 +257,13 @@
 			// 
 			// button6
 			// 
-			this.button6.BackColor = System.Drawing.Color.LightSteelBlue;
+			this.button6.BackColor = System.Drawing.Color.AliceBlue;
 			this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button6.Location = new System.Drawing.Point(41, 244);
+			this.button6.Location = new System.Drawing.Point(23, 83);
 			this.button6.Name = "button6";
 			this.button6.Size = new System.Drawing.Size(135, 42);
 			this.button6.TabIndex = 16;
-			this.button6.Text = "Izvestaj";
+			this.button6.Text = "Izvestaj Lekovi";
 			this.button6.UseVisualStyleBackColor = false;
 			this.button6.Click += new System.EventHandler(this.button6_Click);
 			// 
@@ -292,7 +294,7 @@
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label2.ForeColor = System.Drawing.Color.White;
-			this.label2.Location = new System.Drawing.Point(643, 68);
+			this.label2.Location = new System.Drawing.Point(662, 68);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(83, 25);
 			this.label2.TabIndex = 1;
@@ -304,7 +306,7 @@
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("MV Boli", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.ForeColor = System.Drawing.Color.White;
-			this.label3.Location = new System.Drawing.Point(588, 22);
+			this.label3.Location = new System.Drawing.Point(607, 22);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(197, 46);
 			this.label3.TabIndex = 0;
@@ -321,12 +323,48 @@
 			this.button7.UseVisualStyleBackColor = true;
 			this.button7.Click += new System.EventHandler(this.button7_Click);
 			// 
+			// panel4
+			// 
+			this.panel4.BackColor = System.Drawing.Color.LightSteelBlue;
+			this.panel4.Controls.Add(this.button8);
+			this.panel4.Controls.Add(this.button6);
+			this.panel4.Controls.Add(this.btnIstorijaProdaje);
+			this.panel4.Location = new System.Drawing.Point(524, 221);
+			this.panel4.Name = "panel4";
+			this.panel4.Size = new System.Drawing.Size(374, 224);
+			this.panel4.TabIndex = 27;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("MV Boli", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.White;
+			this.label1.Location = new System.Drawing.Point(636, 173);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(149, 46);
+			this.label1.TabIndex = 2;
+			this.label1.Text = "Izvestaji";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// button8
+			// 
+			this.button8.BackColor = System.Drawing.Color.AliceBlue;
+			this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button8.Location = new System.Drawing.Point(126, 143);
+			this.button8.Name = "button8";
+			this.button8.Size = new System.Drawing.Size(135, 42);
+			this.button8.TabIndex = 17;
+			this.button8.Text = "Izvestaj Kupci";
+			this.button8.UseVisualStyleBackColor = false;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.CornflowerBlue;
 			this.ClientSize = new System.Drawing.Size(1354, 557);
+			this.Controls.Add(this.label1);
+			this.Controls.Add(this.panel4);
 			this.Controls.Add(this.button7);
 			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.panel2);
@@ -340,7 +378,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			this.panel3.ResumeLayout(false);
 			this.panel3.PerformLayout();
+			this.panel4.ResumeLayout(false);
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -368,6 +408,9 @@
 		private System.Windows.Forms.Button button5;
 		private System.Windows.Forms.Button button6;
 		private System.Windows.Forms.Button button7;
+		private System.Windows.Forms.Panel panel4;
+		private System.Windows.Forms.Button button8;
+		private System.Windows.Forms.Label label1;
 	}
 }
 
